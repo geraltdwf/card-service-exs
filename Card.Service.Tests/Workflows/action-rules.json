@@ -1,0 +1,319 @@
+{
+  "Workflows": [
+    {
+      "WorkflowName": "ActionsRules",
+      "Rules": [
+        {
+          "RuleName": "ValidateCardAction1",
+          "SuccessEvent": "Action1",
+          "ErrorMessage": "Action1 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 2 "
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction2",
+          "SuccessEvent": "Action2",
+          "ErrorMessage": "Action2 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 1 "
+            }
+
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction3",
+          "SuccessEvent": "Action3",
+          "ErrorMessage": "Action3 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 3 || CardStatus == 4 || CardStatus == 5 || CardStatus == 6 "
+            }
+
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction4",
+          "SuccessEvent": "Action4",
+          "ErrorMessage": "Action4 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 3 || CardStatus == 4 || CardStatus == 5 || CardStatus == 6 "
+            }
+
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction5",
+          "SuccessEvent": "Action5",
+          "ErrorMessage": "Action5 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 3 || CardStatus == 4 || CardStatus == 5 || CardStatus == 6 "
+            }
+
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction6",
+          "SuccessEvent": "Action6",
+          "ErrorMessage": "Action6 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 4"
+            },
+            {
+              "RuleName": "IsPinSet",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "IsPinSet == true"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction7",
+          "SuccessEvent": "Action7",
+          "ErrorMessage": "Action7 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatusWithPin",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "(CardStatus == 0 && IsPinSet == false) || (CardStatus == 1 && IsPinSet == false) || (CardStatus == 2 && IsPinSet == false) || (CardStatus == 4 && IsPinSet == true)"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction8",
+          "SuccessEvent": "Action8",
+          "ErrorMessage": "Action8 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 4"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction9",
+          "SuccessEvent": "Action9",
+          "ErrorMessage": "Action9 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2 || CardStatus == 3 || CardStatus == 4 || CardStatus == 5 || CardStatus == 6"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction10",
+          "SuccessEvent": "Action10",
+          "ErrorMessage": "Action10 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction11",
+          "SuccessEvent": "Action11",
+          "ErrorMessage": "Action11 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 1 || CardStatus == 2"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction12",
+          "SuccessEvent": "Action12",
+          "ErrorMessage": "Action12 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2"
+            }
+          ]
+        },
+        {
+          "RuleName": "ValidateCardAction13",
+          "SuccessEvent": "Action13",
+          "ErrorMessage": "Action13 is not allowed",
+          "ErrorType": "Error",
+          "Operator": "AndAlso",
+          "Rules": [
+            {
+              "RuleName": "CardKind",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardType == 0 || CardType == 1 || CardType == 2"
+            },
+            {
+              "RuleName": "CardStatus",
+              "ErrorMessage": "One or more adjust rules failed.",
+              "ErrorType": "Error",
+              "RuleExpressionType": "LambdaExpression",
+              "Expression": "CardStatus == 0 || CardStatus == 1 || CardStatus == 2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
